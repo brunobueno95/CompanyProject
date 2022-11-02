@@ -10,7 +10,7 @@ namespace CompanyProject
     {
 
         protected List<string> CodeProficiency = new List<string>();
-        protected List<ItEmployees> AllItEmployees = new List<ItEmployees>();
+        public List<ItEmployees> AllItEmployees { get; protected set; } = new List<ItEmployees>();
         public ItEmployees(string fullName, string gender, int age) : base(fullName, gender, age)
         {
             JobDepartment = "IT";

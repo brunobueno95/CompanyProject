@@ -9,7 +9,7 @@ namespace CompanyProject
     internal class MarketingEmployees : Employees
     {
         protected List<string> DesignProficiency = new List<string>();
-        protected List<MarketingEmployees> AllMEmployees = new List<MarketingEmployees>();
+        public List<MarketingEmployees> AllMEmployees { get; protected set; } = new List<MarketingEmployees>();
 
         public MarketingEmployees(string fullName, string gender, int age) : base(fullName, gender, age)
         {
