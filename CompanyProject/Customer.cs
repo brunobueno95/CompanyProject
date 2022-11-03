@@ -8,19 +8,16 @@ namespace CompanyProject
 {
     internal  class Customer : Persons
     {
-        public static List<Customer> AllCustomers { get; protected set; } = new List<Customer>();
-        public static List<Customer> BronzeCustomers { get;  set; } = new List<Customer>();
-        public static List<Customer> SilverCustomers { get; protected set; } = new List<Customer>();
-        public static  List<Customer> GoldCustomers { get; protected set; } = new List<Customer>();
+       
 
-        private double Payment { get; set; }
+        public double Payment { get; protected set; }
 
 
         public PackageOffer YourPackage { get; set; }
         public Customer(string fullName, string gender, int age,PackageOffer yourPackage) : base(fullName, gender, age)
         {
             YourPackage = yourPackage;
-            AllCustomers.Add(this);
+            Company.AllCustomers.Add(this);
             Payment = yourPackage.Price;
             fillLists();
         }
@@ -29,20 +26,20 @@ namespace CompanyProject
         {
             if (YourPackage.Pname == "Bronze")
             {
-               
-                BronzeCustomers.Add(this);
+
+                Company.BronzeCustomers.Add(this);
                 
             }
             else if (YourPackage.Pname == "Silver")
             {
-                
-                SilverCustomers.Add(this);
+
+                Company.SilverCustomers.Add(this);
               
             }
             else if (YourPackage.Pname == "Gold")
             {
 
-                GoldCustomers.Add(this);
+                Company.GoldCustomers.Add(this);
 
             }
 
@@ -53,14 +50,14 @@ namespace CompanyProject
             if(pckName == "Bronze")
             {
                 YourPackage = new SilverPackage();
-                BronzeCustomers.Remove(this);
-                SilverCustomers.Add(this);
+                Company.BronzeCustomers.Remove(this);
+                Company.SilverCustomers.Add(this);
             }
             else if (pckName == "Silver")
             {
                 YourPackage = new GoldPackage();
-                SilverCustomers.Remove(this);
-                GoldCustomers.Add(this);
+                Company.SilverCustomers.Remove(this);
+                Company.GoldCustomers.Add(this);
             }
 
             else 

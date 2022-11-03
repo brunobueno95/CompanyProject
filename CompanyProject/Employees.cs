@@ -26,7 +26,8 @@ namespace CompanyProject
         public Employees(string fullName, string gender, int age) : base(fullName, gender, age)
         {
             GenerateId();
-            CalculateSalaryPerMonth();
+            
+            Company.AllEmployees.Add(this);
         }
 
         protected virtual void Promotion()
@@ -63,7 +64,16 @@ namespace CompanyProject
 
         public void CalculateSalaryPerMonth()
         {
-            SalaryperMonth = SalaryperHour * Convert.ToDouble(WrkHoursPerDay) * Convert.ToDouble(DaysOfWrkPerWeek);
+            SalaryperMonth = SalaryperHour * Convert.ToDouble(WrkHoursPerDay) * Convert.ToDouble(DaysOfWrkPerWeek) * 4;
+        }
+
+        public void GetInfo()
+        {
+            Console.WriteLine($"First Name: {FirstName}\n Last Name: {LastName} \n " +
+                $"Gender : {Gender}\n Age:{Age}\n Job Department : {JobDepartment}\n" +
+                $"Job Position : {JobPosition}\n Years of experience : {YearsOfExperience}\n" +
+                $"Salary per Month : {SalaryperMonth}\n Salary per Hour: {SalaryperHour}\n" +
+                $"Work hours per day : {WrkHoursPerDay}\n Days of work per week {DaysOfWrkPerWeek}");
         }
 
         //protected virtual void addEmployeeToList( List<Object> list)

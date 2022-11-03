@@ -18,6 +18,7 @@ namespace CompanyProject
             AddCodeProficiency("JavaScript", "C#", "Python");
             AddCodeProficiency("Java", "SQL", ".Net");
             AddCodeProficiency("Azure");
+            CalculateSalaryPerMonth();
 
         }
 

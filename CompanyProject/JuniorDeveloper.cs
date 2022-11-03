@@ -16,6 +16,7 @@ namespace CompanyProject
             WrkHoursPerDay = 6;
             DaysOfWrkPerWeek = 4;
             AddCodeProficiency("JavaScript", "C#");
+            CalculateSalaryPerMonth();
         }
 
         protected override void Promotion()

@@ -17,6 +17,7 @@ namespace CompanyProject
             DaysOfWrkPerWeek = 5;
             AddCodeProficiency("JavaScript", "C#","Python");
             AddCodeProficiency("Java", "SQL", ".Net");
+            CalculateSalaryPerMonth();
         }
 
         protected override void Promotion()

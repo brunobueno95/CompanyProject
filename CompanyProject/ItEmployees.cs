@@ -10,11 +10,11 @@ namespace CompanyProject
     {
 
         protected List<string> CodeProficiency = new List<string>();
-        public List<ItEmployees> AllItEmployees { get; protected set; } = new List<ItEmployees>();
+        
         public ItEmployees(string fullName, string gender, int age) : base(fullName, gender, age)
         {
             JobDepartment = "IT";
-            AllItEmployees.Add(this);
+            Company.AllItEmployees.Add(this);
 
         }
 
@@ -40,7 +40,7 @@ namespace CompanyProject
 
         protected  void addITEmployeeToList()
         {
-            AllItEmployees.Add(this);
+            Company.AllItEmployees.Add(this);
         }
 
     }

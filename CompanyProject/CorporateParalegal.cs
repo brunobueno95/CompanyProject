@@ -15,6 +15,7 @@ namespace CompanyProject
             SalaryperHour = 355;
             WrkHoursPerDay = 8;
             DaysOfWrkPerWeek = 5;
+            CalculateSalaryPerMonth();
         }
 
         protected override void Promotion()
