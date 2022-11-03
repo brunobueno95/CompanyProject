@@ -29,6 +29,8 @@ namespace CompanyProject
             SeniorDeveloper bb = new SeniorDeveloper("Bruno Bueno", "Male", 27);
             
             bb.GetInfo();
+            bb.Promotion();
+            bb.GetInfo();
 
 
         }

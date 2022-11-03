@@ -30,10 +30,11 @@ namespace CompanyProject
             Company.AllEmployees.Add(this);
         }
 
-        protected virtual void Promotion()
+        public virtual void Promotion()
         {
             SalaryperHour = SalaryperHour * 1.3;
             WrkHoursPerDay = Convert.ToInt32(Convert.ToDouble(WrkHoursPerDay) * 1.3);
+            SalaryperMonth = SalaryperHour * Convert.ToDouble(WrkHoursPerDay) * Convert.ToDouble(DaysOfWrkPerWeek) * 4;
             DaysOfWrkPerWeek++;
             if(DaysOfWrkPerWeek >= 5 )
             {

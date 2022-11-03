@@ -22,7 +22,7 @@ namespace CompanyProject
 
         }
 
-        protected override void Promotion()
+        public override void Promotion()
         {
             base.Promotion();
             SalaryperHour += 50;

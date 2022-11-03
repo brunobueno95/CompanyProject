@@ -18,7 +18,7 @@ namespace CompanyProject
             CalculateSalaryPerMonth();
         }
 
-        protected override void Promotion()
+        public override void Promotion()
         {
             base.Promotion();
             SalaryperHour += 50;

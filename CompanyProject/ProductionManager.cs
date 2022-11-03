@@ -16,7 +16,7 @@ namespace CompanyProject
             WrkHoursPerDay = 8;
             DaysOfWrkPerWeek = 5;
         }
-        protected override void Promotion()
+        public override void Promotion()
         {
             base.Promotion();
             SalaryperHour += 35;
