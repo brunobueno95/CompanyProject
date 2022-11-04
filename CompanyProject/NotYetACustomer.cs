@@ -12,31 +12,34 @@ namespace CompanyProject
         public PackageOffer YourPackage { get; set; }
         public NotYetACustomer(string fullName, string gender, int age) : base(fullName, gender, age)
         {
-            Company.NotCustomersList.Add(this);
+            
         }
 
-        public void BuyAPackage(PackageOffer obj)
+        public void BuyAPackage(Company company, PackageOffer obj)
         {
             YourPackage = obj;
-            Company.NotCustomersList.Remove(this);
+            company.NotCustomersList.Remove(this);
 
             if (YourPackage.Pname == "Bronze")
             {
                 Customer newCustomer = new Customer(FullName,Gender,Age,new BronzePackage());
+                company.AllCustomers.Add(newCustomer);
                 
 
             }
             else if (YourPackage.Pname == "Silver")
             {
                 Customer newCustomer = new Customer(FullName, Gender, Age, new SilverPackage());
+                company.AllCustomers.Add(newCustomer);
 
-              
+
 
             }
             else if (YourPackage.Pname == "Gold")
             {
                 Customer newCustomer = new Customer(FullName, Gender, Age, new GoldPackage());
-            
+                company.AllCustomers.Add(newCustomer);
+
 
             }
         }

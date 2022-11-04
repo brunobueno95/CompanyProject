@@ -17,47 +17,25 @@ namespace CompanyProject
         public Customer(string fullName, string gender, int age,PackageOffer yourPackage) : base(fullName, gender, age)
         {
             YourPackage = yourPackage;
-            Company.AllCustomers.Add(this);
+            
             Payment = yourPackage.Price;
-            fillLists();
+           
         }
 
-        public void fillLists()
-        {
-            if (YourPackage.Pname == "Bronze")
-            {
-
-                Company.BronzeCustomers.Add(this);
-                
-            }
-            else if (YourPackage.Pname == "Silver")
-            {
-
-                Company.SilverCustomers.Add(this);
-              
-            }
-            else if (YourPackage.Pname == "Gold")
-            {
-
-                Company.GoldCustomers.Add(this);
-
-            }
-
-
-        }
-        public void UpgradePck(string pckName)
+        
+        public void UpgradePck(Company c, string pckName)
         {
             if(pckName == "Bronze")
             {
                 YourPackage = new SilverPackage();
-                Company.BronzeCustomers.Remove(this);
-                Company.SilverCustomers.Add(this);
+                c.BronzeCustomers.Remove(this);
+                c.SilverCustomers.Add(this);
             }
             else if (pckName == "Silver")
             {
                 YourPackage = new GoldPackage();
-                Company.SilverCustomers.Remove(this);
-                Company.GoldCustomers.Add(this);
+                c.SilverCustomers.Remove(this);
+                c.GoldCustomers.Add(this);
             }
 
             else 

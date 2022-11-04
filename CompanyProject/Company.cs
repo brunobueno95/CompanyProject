@@ -16,18 +16,18 @@ namespace CompanyProject
 
         public double TotalProfit { get; set; }
 
-        public static List<Customer> AllCustomers { get; protected set; } = new List<Customer>();
-        public static List<Customer> BronzeCustomers { get; set; } = new List<Customer>();
-        public static List<Customer> SilverCustomers { get; protected set; } = new List<Customer>();
-        public static List<Customer> GoldCustomers { get; protected set; } = new List<Customer>();
+        public  List<Customer> AllCustomers { get; protected set; } = new List<Customer>();
+        public  List<Customer> BronzeCustomers { get; set; } = new List<Customer>();
+        public  List<Customer> SilverCustomers { get; protected set; } = new List<Customer>();
+        public  List<Customer> GoldCustomers { get; protected set; } = new List<Customer>();
 
-        public static List<Employees> AllEmployees { get; protected set; } = new List<Employees>();
-        public static List<Employees> AllItEmployees { get; protected set; } = new List<Employees>();
-        public static List<NotYetACustomer> NotCustomersList { get; private set; } = new List<NotYetACustomer>();
+        public  List<Employees> AllEmployees { get; protected set; } = new List<Employees>();
+        public  List<Employees> AllItEmployees { get; protected set; } = new List<Employees>();
+        public  List<NotYetACustomer> NotCustomersList { get; private set; } = new List<NotYetACustomer>();
 
-        public static List<Employees> AllMEmployees { get; protected set; } = new List<Employees>();
+        public  List<Employees> AllMEmployees { get; protected set; } = new List<Employees>();
 
-        public static List<Employees> AllLawEmployees { get; protected set; } = new List<Employees>();
+        public  List<Employees> AllLawEmployees { get; protected set; } = new List<Employees>();
 
 
         public Company(string nameOfCompany)
@@ -161,6 +161,30 @@ namespace CompanyProject
 
         }
 
-       
+        public void fillLists(Customer c, PackageOffer cpkg)
+        {
+            if (cpkg.Pname == "Bronze")
+            {
+
+                BronzeCustomers.Add(c);
+
+            }
+            else if (cpkg.Pname == "Silver")
+            {
+
+                SilverCustomers.Add(c);
+
+            }
+            else if (cpkg.Pname == "Gold")
+            {
+
+                GoldCustomers.Add(c);
+
+            }
+
+
+        }
+
+
     }
 }
