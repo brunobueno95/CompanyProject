@@ -38,7 +38,7 @@ namespace CompanyProject
 
         
 
-        public void GetStatisticCustomers(List<Employees> listType, string department);
+        public void GetStatisticCustomers(List<Customer> listType, string department);
 
         public void FinanceDescription();
         

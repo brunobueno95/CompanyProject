@@ -26,8 +26,10 @@ namespace CompanyProject
         public Employees(string fullName, string gender, int age) : base(fullName, gender, age)
         {
             GenerateId();
+            //it - jdeveloper - senior developer
+            //law - lawyer
+            //marketing
             
-            Company.AllEmployees.Add(this);
         }
 
         public virtual void Promotion()

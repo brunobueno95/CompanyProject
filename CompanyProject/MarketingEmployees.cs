@@ -14,14 +14,12 @@ namespace CompanyProject
         public MarketingEmployees(string fullName, string gender, int age) : base(fullName, gender, age)
         {
             JobDepartment = "Marketing";
-            addMEmployeeToList();
-        }
-
-        protected void addMEmployeeToList()
-        {
-            Company.AllMEmployees.Add(this);
             
         }
+
+      
+            
+        
 
         public void AddDesignProficiency(string l1, string l2, string l3)
         {

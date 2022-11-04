@@ -14,7 +14,7 @@ namespace CompanyProject
         public ItEmployees(string fullName, string gender, int age) : base(fullName, gender, age)
         {
             JobDepartment = "IT";
-            Company.AllItEmployees.Add(this);
+            
 
         }
 
@@ -38,10 +38,7 @@ namespace CompanyProject
             
         }
 
-        protected  void addITEmployeeToList()
-        {
-            Company.AllItEmployees.Add(this);
-        }
+        
 
     }
 }

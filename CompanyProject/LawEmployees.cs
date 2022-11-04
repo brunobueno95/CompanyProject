@@ -13,7 +13,7 @@ namespace CompanyProject
         public LawEmployees(string fullName, string gender, int age) : base(fullName, gender, age)
         {
             JobDepartment = "Law";
-                Company.AllLawEmployees.Add(this);
+                
         }
         
     }
